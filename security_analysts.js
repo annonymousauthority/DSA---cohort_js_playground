@@ -4,10 +4,6 @@
 - detect threat level
 - check for occurence of keywords in letters (string)
 
-let threats_ = new Map();
-threats_.set("betray", 3);
-threats_.set("elon", 1);
-threats_.set("pikachu", 1);
  */
 
 let convStringArray = (str) => {
@@ -30,11 +26,22 @@ let detectThreatLevel = (threats) => {
   };
 };
 
-detectThreatLevel(threats_);
 
 function keywordOccurence(str, keywords) {
   const threats = new Map();
 
-  // Put your codes here.
+  
+  convStringArray(str).forEach((word) => {
+    if (keywords.includes(word)) {
+      if (threats.has(word)) {
+        threats.set(word, threats.get(word) + 1);
+      } else {
+        threats.set(word, 1);
+      }
+    }
+  })
+
   return detectThreatLevel(threats);
 }
+
+console.log(keywordOccurence("dara is a verb dak sombodw dara he he son son he ajdn he was doing son verk sad thim=ng", ['dara', 'son']))
