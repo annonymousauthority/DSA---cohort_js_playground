@@ -25,6 +25,7 @@ class LinkedList {
     } else {
       // put your codes here
       // write the logic if LL is not empty
+      // what is the Big-O notation?
     }
   }
 }
