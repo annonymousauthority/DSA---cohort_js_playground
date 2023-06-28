@@ -36,5 +36,20 @@ function keywordOccurence(str, keywords) {
   const threats = new Map();
 
   // Put your codes here.
+  const words = convStringArray(str);
+
+  for(let word of words){
+    if(keywords.includes(word)){
+      if(threats.has(word)){
+        threats.set(word,threats.get(word) + 1)
+      }else {
+        threats.set(word, 1)
+      }
+
+    }
+  }
+
+
+  
   return detectThreatLevel(threats);
 }
