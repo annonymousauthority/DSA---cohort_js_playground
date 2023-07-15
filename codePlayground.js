@@ -16,7 +16,7 @@ function sayHiDeclared() {
   console.log("Hi");
 }
 
-sayHiExpressed();
 let sayHiExpressed = function () {
   console.log("Hi");
 };
+sayHiExpressed();

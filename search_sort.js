@@ -30,9 +30,9 @@ function binaryFindValue(arr, value) {
     if (arr[midIndex] == value) {
       return true;
     } else if (value > arr[midIndex]) {
-      lowIndex = midIndex;
+      lowIndex = midIndex + 1;
     } else {
-      highIndex = midIndex;
+      highIndex = midIndex - 1;
     }
   }
 
