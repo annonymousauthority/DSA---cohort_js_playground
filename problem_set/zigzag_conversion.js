@@ -17,6 +17,10 @@ function zigzagConversion(regularString, numRows) {
   // Insert letter to the right row
   // Reverse direction when the string gets to the end position or start position
 
+   if (numRows === 1 || regularString.length <= numRows) {
+     return s;
+   }
+
   let row = new Array(numRows).fill("");
   let rowIndex = 0;
   let direction = -1;
