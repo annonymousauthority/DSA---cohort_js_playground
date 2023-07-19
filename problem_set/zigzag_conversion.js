@@ -11,7 +11,7 @@ And then read line by line: "PAHNAPLSIIGYIR"
 
  */
 
-function zigzagConversion(s, numRows) {
+function zigzagConversion(regularString, numRows) {
   // Initialize an array holder for the set number of rows.
   // Traverse the string
   // Insert letter to the right row
@@ -21,8 +21,8 @@ function zigzagConversion(s, numRows) {
   let rowIndex = 0;
   let direction = -1;
 
-  for (let i = 0; i < s.length; i++) {
-    row[rowIndex] += s[i];
+  for (let i = 0; i < regularString.length; i++) {
+    row[rowIndex] += regularString[i];
 
     if (rowIndex === 0 || rowIndex === numRows - 1) {
       direction = -direction;
